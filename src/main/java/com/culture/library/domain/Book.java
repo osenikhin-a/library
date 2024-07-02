@@ -1,6 +1,7 @@
 package com.culture.library.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -11,6 +12,7 @@ import java.util.Set;
 
 @Entity(name = "book")
 @RequiredArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 public class Book {

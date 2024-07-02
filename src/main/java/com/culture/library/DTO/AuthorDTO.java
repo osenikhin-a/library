@@ -9,7 +9,7 @@ public class AuthorDTO {
     private String name;
     private String patronymic;
     private String surname;
-    private LocalDate birthDate;
-    private LocalDate deathDate;
+    private String birthDate;
+    private String deathDate;
     private String uuid;
 }

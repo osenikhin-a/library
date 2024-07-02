@@ -33,14 +33,14 @@ public class AuthorService {
             authorDTO.setName(author.getName());
             authorDTO.setPatronymic(author.getPatronymic());
             authorDTO.setSurname(author.getSurname());
-            authorDTO.setBirthDate(author.getBirthDate());
-            authorDTO.setDeathDate(author.getDeathDate());
+            authorDTO.setBirthDate(author.getBirthDate().toString());
+            authorDTO.setDeathDate(author.getDeathDate().toString());
             authorDTO.setUuid(author.getUuid());
         }
         return  authorDTO;
     }
 
-    List<AuthorDTO> convertAllEntitysToDTO(Iterable<Author> authors){
+    List<AuthorDTO> convertAllEntitesToDTO(Iterable<Author> authors){
         List<AuthorDTO> authorDTOs = new ArrayList<>();
         for(Author author : authors){
             authorDTOs.add(convertEntityToDTO(author));
@@ -55,7 +55,7 @@ public class AuthorService {
     }
 
     public List<AuthorDTO> getAllAuthorsDTO(){
-        return convertAllEntitysToDTO(getAllAuthors());
+        return convertAllEntitesToDTO(getAllAuthors());
     }
 
     public AuthorDTO getAuthorByUuid(String uuid){
