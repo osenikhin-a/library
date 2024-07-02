@@ -24,6 +24,8 @@ public class AuthorService {
         authorDTO.setPatronymic("");
         authorDTO.setSurname("");
         authorDTO.setUuid("");
+        authorDTO.setBirthDate("");
+        authorDTO.setDeathDate("");
         return  authorDTO;
     }
 
